@@ -193,20 +193,25 @@
 /*         media query */
 
         /* Mobile devices */
+/* Mobile devices */
 @media (max-width: 480px) {
     body {
         font-size: 14px; /* Adjust font size for better readability on smaller screens */
+        padding: 0; /* Ensure no extra padding around the body */
+        margin: 0; /* Ensure no margin around the body */
     }
 
     .container {
         padding: 10px;
         flex-direction: column;
+        height: auto; /* Adjust height to fit content on mobile */
     }
 
     .left {
-        margin-right: 0;
+        margin: 0;
         margin-bottom: 20px;
         background-color: #f9f9f9; /* Slightly lighter background for better contrast */
+        border: none; /* Remove border for a cleaner look */
     }
 
     .right {
@@ -217,6 +222,7 @@
     .box {
         padding: 15px;
         text-align: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
     }
 
     .box img {
@@ -229,21 +235,30 @@
         right: 10px;
         padding: 10px;
         font-size: 12px; /* Smaller font size for messages */
+        background-color: #fff; /* Ensure good contrast with a white background */
+        border: 1px solid #ddd; /* Light border for better visibility */
+        border-radius: 5px; /* Rounded corners for a cleaner look */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Light shadow for better visibility */
     }
 
     .chat-container {
         width: 100%;
-        height: 100%;
-        max-height: 400px;
+        height: 100vh; /* Full viewport height */
+        max-height: none; /* Remove max-height restriction */
         bottom: 0;
         right: 0;
         border-radius: 0;
-        box-shadow: none; /* Remove shadow for a cleaner look on small screens */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
     }
 
     .chat-header {
         font-size: 16px; /* Adjust font size for header */
         padding: 8px;
+    }
+
+    .chat-body {
+        padding: 10px;
+        overflow-y: auto;
     }
 
     .chat-footer {
@@ -260,11 +275,19 @@
     }
 
     .chat-logo {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #0096FF;
+        color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Light shadow for better visibility */
     }
 }
+
 
     </style>
 </head>
